@@ -60,7 +60,7 @@ This repository shows how to integrate Brevo SMTP into a Spring Boot application
 1. Clone the repository  
 
    ```bash
-   git clone https://github.com/your-username/brevo-springboot-integration.git
+   git clone https://github.com/suyash-rgb/spring-boot-demo-BrevoSMTP-Integration.git
    cd brevo-springboot-integration
    ```
 
@@ -186,3 +186,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Brevo (Sendinblue) for providing a robust email API  
 - Spring Boot community for starter-mail support  
 - GreenMail for SMTP testing library  
+
