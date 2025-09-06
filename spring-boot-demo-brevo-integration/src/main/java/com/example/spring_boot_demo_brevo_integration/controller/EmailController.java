@@ -15,13 +15,15 @@ import com.example.spring_boot_demo_brevo_integration.service.EmailService;
 @RequestMapping("/api/email")
 public class EmailController {
 
-     @Autowired
+    @Autowired
     private EmailService emailService;
 
     @PostMapping("/send-text")
     //send a simple mail
     public ResponseEntity<String> sendTextEmail(@RequestBody EmailRequest request){
         try{
+              System.out.println("Request received: " + request);
+              
               emailService.sendEmail(request.getTo(), request.getSubject(), request.getBody());
               return ResponseEntity.ok("Email sent successfully");
                
@@ -35,6 +37,7 @@ public class EmailController {
     //send a html mail
     public ResponseEntity<String> sendHtmlEmail(@RequestBody EmailRequest request){
         try{
+              System.out.println("Request received: " + request);
               emailService.sendHtmlEmail(request.getTo(), request.getSubject(), request.getBody());
               return ResponseEntity.ok("HTML Email sent successfully");
                
